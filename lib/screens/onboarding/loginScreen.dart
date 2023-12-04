@@ -26,8 +26,6 @@ class _loginScreenState extends State<loginScreen> {
     } else if (FormValues['password']!.length == 0) {
       ErrorToast('Password required');
     } else {
-      //ErrorToast('Rudra is great');
-
       setState(() {
         Loading = true;
       });
@@ -36,7 +34,7 @@ class _loginScreenState extends State<loginScreen> {
 
       if (res == true) {
         Navigator.pushNamedAndRemoveUntil(
-            context, '/newTaskList', (route) => false);
+            context, '/', (route) => false);
       } else {
         setState(() {
           Loading = false;

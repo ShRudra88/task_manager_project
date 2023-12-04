@@ -5,7 +5,8 @@ import 'package:task_manager_project/screens/onboarding/pinVerificationScreen.da
 import 'package:task_manager_project/screens/onboarding/registrationScreen.dart';
 import 'package:task_manager_project/screens/onboarding/setPasswordScreen.dart';
 import 'package:task_manager_project/screens/onboarding/splashScreen.dart';
-import 'package:task_manager_project/screens/task/newTaskListScreen.dart';
+import 'package:task_manager_project/screens/task/homeScreen.dart';
+import 'package:task_manager_project/component/newTaskList.dart';
 import 'package:task_manager_project/utility/utility.dart';
 
 main()async
@@ -14,8 +15,8 @@ main()async
 
   String? token =  await ReadUserData('token');
 
-  if(token==null)runApp(MyApp('/newTaskList'));
-  else runApp(MyApp('/login'));
+  if(token==null)runApp(MyApp('/'));
+  else runApp(MyApp('/'));
 }
 
 class MyApp extends StatelessWidget {
@@ -28,15 +29,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Task Manager",
-      initialRoute: '/login',
+      initialRoute: FirstRoute,
       routes: {
-        '/':(context)=> splashScreen(),
+        '/':(context)=> homeScreen(),
         '/login':(context)=> loginScreen(),
         '/registration':(context)=> registrationScreen(),
         '/emailVerification':(context)=> emailVerificationScreen(),
         '/pinVerification':(context)=> pinVerificationScreen(),
         '/setPassword':(context)=> setPasswordScreen(),
-        '/newTaskList':(context)=> newTaskListScreen(),
+        '/newTaskList':(context)=> newTaskList(),
       },
     );
   }

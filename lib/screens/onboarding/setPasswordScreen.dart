@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/utility/utility.dart';
 
@@ -15,7 +13,7 @@ class setPasswordScreen extends StatefulWidget {
 
 class _setPasswordScreenState extends State<setPasswordScreen> {
 
-  Map<String, String> FormValues = {"email":"", "OTP":"","password":"", "cpassword":""}
+  Map<String, String> FormValues = {"email":"", "OTP":"","password":"", "cpassword":""};
   bool Loading = false;
 
   @override
@@ -88,7 +86,7 @@ class _setPasswordScreenState extends State<setPasswordScreen> {
                     style: AppButtonStyle(),
                     child: SuccessButtonChild('Conform'),
                     onPressed: (){
-                      FormOnSubmit()
+                      FormOnSubmit();
                     },
                   ),
                 )
