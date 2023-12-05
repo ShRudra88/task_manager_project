@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/api/apiClient.dart';
+import 'package:task_manager_project/component/TaskList.dart';
 
 class completeTaskList extends StatefulWidget {
   const completeTaskList({super.key});
@@ -31,9 +32,13 @@ class _completeTaskListState extends State<completeTaskList> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('complete'),
-    );
+    return Loading
+        ? (Center(
+      child: CircularProgressIndicator(),
+    ))
+        : (Center(
+      child: TaskList(TaskItems),
+    ));
   }
 }
 

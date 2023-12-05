@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_project/component/TaskList.dart';
 
 import '../api/apiClient.dart';
 
@@ -32,8 +33,10 @@ class _progressTaskListState extends State<progressTaskList> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text('progess'),
+    return Loading?(Center(child: CircularProgressIndicator(),)):RefreshIndicator(onRefresh: ()async{
+      await CallData();
+    },
+      child: Center(child: TaskList(TaskItems),),
     );
   }
 }

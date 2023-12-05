@@ -15,6 +15,16 @@ const colorLightGray = Color.fromRGB0(135, 142, 150, 1);
 const colorLight = Color.fromRGB0(211, 211, 211, 1);
 */
 
+SizedBox ItemSizeBox(child)
+{
+  return SizedBox(
+    width: double.infinity,
+    child: Container(
+      padding: EdgeInsets.all(10),
+    ),
+  );
+}
+
 TextStyle Head1Text(textColor)
 {
   return TextStyle(
