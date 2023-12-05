@@ -36,3 +36,10 @@ Future<String?> ReadUserData(key)async
   return mydata;
 }
 
+ShowBase64Image(Base64String)
+{
+  UriData? data = Uri.parse(Base64String).data;
+
+  UinBlist MyImage = data!.contentAsBytes();
+  return MyImage;
+}

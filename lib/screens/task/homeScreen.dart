@@ -4,6 +4,7 @@ import 'package:task_manager_project/component/cancilTaskList.dart';
 import 'package:task_manager_project/component/completeTaskList.dart';
 import 'package:task_manager_project/component/newTaskList.dart';
 import 'package:task_manager_project/component/progressTaskList.dart';
+import 'package:task_manager_project/screens/onboarding/TaskAppBar.dart';
 
 class homeScreen extends StatefulWidget {
   const homeScreen({super.key});
@@ -33,8 +34,7 @@ class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
+      appBar: TaskAppBar(),
       body: widgetOption.elementAt(TabIndex),
       bottomNavigationBar: appBottomNav(TabIndex, onItemTapped),
     );
