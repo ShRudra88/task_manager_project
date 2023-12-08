@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> WriteUserData(UserData)async
@@ -34,6 +36,14 @@ Future<String?> ReadUserData(key)async
 
 
   return mydata;
+}
+
+Future<bool> RemoveToken() async
+{
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.clear();
+
+  return true;
 }
 
 ShowBase64Image(Base64String)

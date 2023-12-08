@@ -50,6 +50,14 @@ TextStyle Head6Text(textColor)
     fontFamily: 'poppins',
     fontWeight: FontWeight.w400,
   );
+}TextStyle Head9Text(textColor)
+{
+  return TextStyle(
+    color: textColor,
+    fontSize: 9,
+    fontFamily: 'poppins',
+    fontWeight: FontWeight.w400,
+  );
 }
 
 TextStyle ButtonTextStyle()
