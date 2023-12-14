@@ -1,8 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/ui/screens/splashScreen.dart';
-import 'package:task_manager_project/ui/widgets/body_background.dart';
 
 class TaskManagerApp extends StatelessWidget {
 
