@@ -3,6 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_manager_project/ui/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();

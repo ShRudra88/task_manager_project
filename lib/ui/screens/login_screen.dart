@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/ui/screens/forgot_password_screen.dart';
+import 'package:task_manager_project/ui/screens/main_bottom_nav_screen.dart';
 import 'package:task_manager_project/ui/screens/sign_up_screen.dart';
 import 'package:task_manager_project/ui/widgets/body_background.dart';
 
@@ -58,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => MainBottomNavScreen(),),);
                     },
                     child: const Icon(Icons.arrow_circle_right_outlined),
                   ),

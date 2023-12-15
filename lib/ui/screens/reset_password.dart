@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_project/ui/screens/login_screen.dart';
 import 'package:task_manager_project/ui/screens/pin_verification_screen.dart';
 import 'package:task_manager_project/ui/widgets/body_background.dart';
 
@@ -18,14 +19,14 @@ class _ResetPasswordState extends State<ResetPassword> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 Text('Set Password',
                     style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(
                   height: 8,
-                ), Text('minimum length password 8 character with Latter and number combination',
+                ), const Text('minimum length password 8 character with Latter and number combination',
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey,
@@ -35,8 +36,8 @@ class _ResetPasswordState extends State<ResetPassword> {
                   height: 24,
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  keyboardType: TextInputType.visiblePassword,
+                  decoration: const InputDecoration(
                       helperText: 'Password',
                       fillColor: Colors.white,
                       filled: true,
@@ -48,7 +49,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   height: 16,
                 ),TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       helperText: 'Conform Password',
                       fillColor: Colors.white,
                       filled: true,
@@ -82,6 +83,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       ),
                     ),
                     TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),),);
 
                     },
                       child: const Text(

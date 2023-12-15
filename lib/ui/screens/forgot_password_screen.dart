@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager_project/ui/screens/login_screen.dart';
 import 'package:task_manager_project/ui/screens/pin_verification_screen.dart';
 import 'package:task_manager_project/ui/widgets/body_background.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
+  const ForgotPasswordScreen({super.key});
+
   @override
   State<ForgotPasswordScreen> createState() => _ForgotPasswordScreenState();
 }
@@ -18,14 +21,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 Text('Your Email Address',
                     style: Theme.of(context).textTheme.titleLarge),
                 const SizedBox(
                   height: 8,
-                ), Text('A 6 digit OTP will be sent to your email',
+                ), const Text('A 6 digit OTP will be sent to your email',
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.grey,
@@ -36,7 +39,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       helperText: 'Email',
                       fillColor: Colors.white,
                       filled: true,
@@ -70,6 +73,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       ),
                     ),
                     TextButton(onPressed: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),),);
 
                     },
                       child: const Text(
