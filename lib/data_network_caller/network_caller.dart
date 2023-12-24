@@ -4,7 +4,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:task_manager_project/app.dart';
-import 'package:task_manager_project/data_network_caller/auth_controller.dart';
+import 'package:task_manager_project/controllers/auth_controller.dart';
 import 'package:task_manager_project/ui/screens/login_screen.dart';
 
 import 'network_response.dart';
