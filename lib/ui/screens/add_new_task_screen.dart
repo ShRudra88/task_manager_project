@@ -4,7 +4,6 @@ import 'package:task_manager_project/ui/widgets/body_background.dart';
 import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
 import 'package:task_manager_project/ui/widgets/snack_massage.dart';
 import 'package:task_manager_project/utility/urls.dart';
-
 import '../../data_network_caller/network_response.dart';
 
 class AddNewTaskScreen extends StatefulWidget {
@@ -33,23 +32,23 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
         body: SafeArea(
           child: Column(
             children: [
-              ProfileSummaryCard(enableOnTap: null,),
+              const ProfileSummaryCard(enableOnTap: false,),
               Expanded(
                 child: BodyBackground(
                   child: SingleChildScrollView(
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Form(
                         key: _formKey,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 32,),
+                            const SizedBox(height: 32,),
                             Text('Add New Task', style: Theme.of(context).textTheme.titleLarge,),
-                            SizedBox(height: 16,),
+                            const SizedBox(height: 16,),
                             TextFormField(
                               controller: _subjectTEController,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   hintText: 'Subject'
                               ),
                               validator: (String? value) {
@@ -59,11 +58,11 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                                 return null;
                               },
                             ),
-                            SizedBox(height: 8,),
+                            const SizedBox(height: 8,),
                             TextFormField(
                               controller: _descriptionTEController,
                               maxLines: 8,
-                              decoration: InputDecoration(
+                              decoration: const InputDecoration(
                                   hintText: 'Description'
                               ),
                               validator: (String? value) {
@@ -73,17 +72,17 @@ class _AddNewTaskScreenState extends State<AddNewTaskScreen> {
                                 return null;
                               },
                             ),
-                            SizedBox(height: 16,),
+                            const SizedBox(height: 16,),
                             SizedBox(
                               width: double.infinity,
                               child: Visibility(
                                 visible: _createTaskInProgress == false,
-                                replacement: Center(
+                                replacement: const Center(
                                   child: CircularProgressIndicator(),
                                 ),
                                 child: ElevatedButton(
                                   onPressed: createTask,
-                                  child: Icon(Icons.arrow_circle_right_outlined),
+                                  child: const Icon(Icons.arrow_circle_right_outlined),
                                 ),
                               ),
                             )

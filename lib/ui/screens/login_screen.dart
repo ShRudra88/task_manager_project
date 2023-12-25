@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:task_manager_project/controllers/auth_controller.dart';
 import 'package:task_manager_project/data_network_caller/network_caller.dart';
 import 'package:task_manager_project/data_network_caller/network_response.dart';
+import 'package:task_manager_project/models/user_model.dart';
 import 'package:task_manager_project/ui/screens/forgot_password_screen.dart';
 import 'package:task_manager_project/ui/screens/main_bottom_nav_screen.dart';
 import 'package:task_manager_project/ui/screens/sign_up_screen.dart';

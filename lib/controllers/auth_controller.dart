@@ -1,6 +1,6 @@
-import 'dart:convert';
-
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:task_manager_project/models/user_model.dart';
+import 'dart:convert';
 
 class AuthController {
   static String? token;

@@ -6,31 +6,28 @@ import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
 import 'package:task_manager_project/ui/widgets/task_item_card.dart';
 import 'package:task_manager_project/utility/urls.dart';
 
-
-
-class CompletedTasksScreen extends StatefulWidget {
-  const CompletedTasksScreen({super.key});
+class CancelledTasksScreen extends StatefulWidget {
+  const CancelledTasksScreen({super.key});
 
   @override
-  State<CompletedTasksScreen> createState() => _CompletedTasksScreenState();
+  State<CancelledTasksScreen> createState() => _CancelledTasksScreenState();
 }
 
-class _CompletedTasksScreenState extends State<CompletedTasksScreen> {
-  bool getCompletedTaskInProgress = false;
-  bool getUpdateProfileSummaryCard = false;
+class _CancelledTasksScreenState extends State<CancelledTasksScreen> {
+  bool getCancelledTaskInProgress = false;
   TaskListModel taskListModel = TaskListModel();
 
-  Future<void> getCompletedTaskList() async {
-    getCompletedTaskInProgress = true;
+  Future<void> getCancelledTaskList() async {
+    getCancelledTaskInProgress = true;
     if (mounted) {
       setState(() {});
     }
     final NetworkResponse response =
-    await NetworkCaller().getRequest(Urls.getCompletedTasks);
+    await NetworkCaller().getRequest(Urls.getCancelledTasks);
     if (response.isSuccess) {
       taskListModel = TaskListModel.fromJson(response.jsonResponse);
     }
-    getCompletedTaskInProgress = false;
+    getCancelledTaskInProgress = false;
     if (mounted) {
       setState(() {});
     }
@@ -38,7 +35,7 @@ class _CompletedTasksScreenState extends State<CompletedTasksScreen> {
 
   @override
   void initState() {
-    getCompletedTaskList();
+    getCancelledTaskList();
     super.initState();
   }
 
@@ -48,23 +45,23 @@ class _CompletedTasksScreenState extends State<CompletedTasksScreen> {
         body: SafeArea(
           child: Column(
             children: [
-              const ProfileSummaryCard(enableOnTap: false,),
+              ProfileSummaryCard(enableOnTap: false,),
               Expanded(
                 child: Visibility(
-                  visible: getCompletedTaskInProgress == false,
+                  visible: getCancelledTaskInProgress == false,
                   replacement: const Center(child: CircularProgressIndicator()),
                   child: RefreshIndicator(
-                    onRefresh: getCompletedTaskList,
+                    onRefresh: getCancelledTaskList,
                     child: ListView.builder(
                       itemCount: taskListModel.taskList?.length ?? 0,
                       itemBuilder: (context, index) {
                         return TaskItemCard(
                           task: taskListModel.taskList![index],
                           onStatusChange: () {
-                            getCompletedTaskList();
+                            getCancelledTaskList();
                           },
                           showProgress: (inProgress) {
-                            getCompletedTaskInProgress = inProgress;
+                            getCancelledTaskInProgress = inProgress;
                             if (mounted) {
                               setState(() {});
                             }

@@ -1,12 +1,10 @@
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:task_manager_project/app.dart';
 import 'package:task_manager_project/controllers/auth_controller.dart';
 import 'package:task_manager_project/ui/screens/login_screen.dart';
-
 import 'network_response.dart';
 
 class NetworkCaller {
@@ -45,8 +43,8 @@ class NetworkCaller {
           jsonResponse: jsonDecode(response.body),
         );
       }
-    } catch (e) {
-      return NetworkResponse(isSuccess: false, errorMessage: e.toString());
+    } catch (msg) {
+      return NetworkResponse(isSuccess: false, errorMessage: msg.toString());
     }
   }
 
