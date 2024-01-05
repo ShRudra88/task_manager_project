@@ -1,3 +1,6 @@
+
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/ui/widgets/body_background.dart';
 import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
@@ -92,6 +95,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
           ),
         ),
       );
+
 
   Container PhotoPickerField() {
     return Container(

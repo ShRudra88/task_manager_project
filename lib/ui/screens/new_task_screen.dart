@@ -7,8 +7,9 @@ import 'package:task_manager_project/models/task_list_model.dart';
 import 'package:task_manager_project/ui/screens/add_new_task_screen.dart';
 import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
 import 'package:task_manager_project/ui/widgets/summary_card.dart';
+import 'package:task_manager_project/ui/widgets/task_item_card.dart';
 import 'package:task_manager_project/utility/urls.dart';
-import '../widgets/task_item_card.dart';
+
 
 class NewTasksScreen extends StatefulWidget {
   const NewTasksScreen({super.key});

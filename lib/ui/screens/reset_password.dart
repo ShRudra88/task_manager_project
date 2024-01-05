@@ -64,7 +64,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => PinVerificationScreen(),),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const PinVerificationScreen(),),);
                     },
                     child: const Text('Confirm'),
                   ),
@@ -83,7 +83,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       ),
                     ),
                     TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),),);
 
                     },
                       child: const Text(

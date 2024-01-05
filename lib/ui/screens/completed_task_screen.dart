@@ -6,8 +6,6 @@ import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
 import 'package:task_manager_project/ui/widgets/task_item_card.dart';
 import 'package:task_manager_project/utility/urls.dart';
 
-
-
 class CompletedTasksScreen extends StatefulWidget {
   const CompletedTasksScreen({super.key});
 

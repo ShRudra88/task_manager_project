@@ -54,7 +54,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => PinVerificationScreen(),),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const PinVerificationScreen(),),);
                     },
                     child: const Icon(Icons.arrow_circle_right_outlined),
                   ),
@@ -73,7 +73,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                       ),
                     ),
                     TextButton(onPressed: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen(),),);
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen(),),);
 
                     },
                       child: const Text(

@@ -45,7 +45,7 @@ class _ProgressTasksScreenState extends State<ProgressTasksScreen> {
         body: SafeArea(
           child: Column(
             children: [
-              ProfileSummaryCard(enableOnTap: false,),
+              const ProfileSummaryCard(enableOnTap: false,),
               Expanded(
                 child: Visibility(
                   visible: getProgressTaskInProgress == false,

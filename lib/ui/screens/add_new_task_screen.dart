@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager_project/data_network_caller/network_caller.dart';
+import 'package:task_manager_project/data_network_caller/network_response.dart';
 import 'package:task_manager_project/ui/widgets/body_background.dart';
 import 'package:task_manager_project/ui/widgets/profile_summary_card.dart';
 import 'package:task_manager_project/ui/widgets/snack_massage.dart';
 import 'package:task_manager_project/utility/urls.dart';
-import '../../data_network_caller/network_response.dart';
+
 
 class AddNewTaskScreen extends StatefulWidget {
   const AddNewTaskScreen({super.key});

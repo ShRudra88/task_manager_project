@@ -26,7 +26,7 @@ class ProfileSummaryCard extends StatelessWidget {
             fontWeight: FontWeight.w700
         ),
       ),
-      subtitle: const Text('shr@gmai.com',
+      subtitle: const Text('shr@gmail.com',
         style: TextStyle(
           color: Colors.white,
         ),

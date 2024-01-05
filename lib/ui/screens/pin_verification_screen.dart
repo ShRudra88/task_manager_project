@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:task_manager_project/ui/screens/login_screen.dart';
-import 'package:task_manager_project/ui/screens/reset_password.dart';import 'package:task_manager_project/ui/widgets/body_background.dart';
+import 'package:task_manager_project/ui/screens/reset_password.dart';
+import 'package:task_manager_project/ui/widgets/body_background.dart';
 
 class PinVerificationScreen extends StatefulWidget {
   const PinVerificationScreen({super.key});

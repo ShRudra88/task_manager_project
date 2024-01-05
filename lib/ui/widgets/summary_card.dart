@@ -14,7 +14,7 @@ class SummaryCard extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical:16),
         child: Column(
           children: [
-            Text('${count}', style: Theme.of(context).textTheme.titleLarge,),
+            Text(count, style: Theme.of(context).textTheme.titleLarge,),
             Text(title),
           ],
         ),
