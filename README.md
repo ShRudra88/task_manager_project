@@ -1,6 +1,4 @@
-# task_manager_project
-
-A new Flutter project.
+A Flutter project.
 
 SDLC for task manager project
 
